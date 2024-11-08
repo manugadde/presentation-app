@@ -1,0 +1,38 @@
+@import 'https://js.arcgis.com/4.30/@arcgis/core/assets/esri/themes/dark/main.css';
+
+#root,
+html,
+body {
+  background-color: var(--calcite-ui-foreground-2);
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  height: 100%;
+}
+
+.editor-wrapper {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  height: 60%;
+  width: 65%;
+}
+
+arcgis-map {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 10px 0 10px;
+}
+arcgis-charts-scatter-plot {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  height: 40%;
+  width: 45%;
+}
