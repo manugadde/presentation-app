@@ -1,5 +1,9 @@
 @import 'https://js.arcgis.com/4.30/@arcgis/core/assets/esri/themes/dark/main.css';
 
+* {
+  box-sizing: border-box;
+}
+
 #root,
 html,
 body {
@@ -8,31 +12,147 @@ body {
   margin: 0;
   height: 100%;
   width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+p {
+  text-align: center;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  background-color: #333;
+  color: white;
+  margin-right: 5px;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.tab-button:hover {
+  background-color: #555;
+}
+
+.tab-button.active {
+  background-color: #10a195;
+}
+
+.tab-content {
+  padding: 20px;
+  margin-top: 20px;
 }
 
 .container {
-  height: 100%;
+  padding: 10px;
+  height: 600px;
 }
 
 .editor-wrapper {
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
+  height: 600px;
+  width: 100%;
+  color: #fff;
+  z-index: 2;
+}
+
+.charts-wrapper {
+  position: relative;
   height: 60%;
   width: 65%;
 }
 
-arcgis-map {
-  height: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px 10px 0 10px;
+.render-button {
+  position: fixed;
+  bottom: 60%;
+  right: 10%;
 }
-arcgis-charts-scatter-plot {
+
+arcgis-map {
+  height: 400px;
+  width: 100%;
+  z-index: 1;
+}
+
+arcgis-charts-line-chart {
   position: absolute;
-  bottom: 30px;
+  bottom: 100px;
+  height: 26%;
+  width: 30%;
+  right: 40px;
+  z-index: 2;
+}
+
+arcgis-charts-scatter-plot {
   left: 30px;
-  height: 40%;
-  width: 45%;
+  position: absolute;
+  bottom: 100px;
+  height: 26%;
+  width: 30%;
+  z-index: 2;
+}
+
+
+.map-arcade-editor {
+  position: fixed;
+  bottom: 100px;
+  height: 65%;
+  width: 60%;
+}
+
+arcgis-arcade-editor {
+  right: 30px;
+  height: 25%;
+  width: 30%;
+  position: fixed;
+  bottom: 100px;
+}
+
+.map-render-button {
+  position: fixed;
+  bottom: 41%;
+  right: 30px;
+  height: 35%;
+  width: 30%;
+}
+
+.calcite-button {
+  z-index: 2;
+  bottom: 100px;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column1 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+.column2 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+.large-font {
+  font-size: 48px;
+}
+
+.xlarge-font {
+  font-size: 64px;
 }
